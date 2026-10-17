@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fbfaf7">
+  <meta name="description" content="衣间：你的私人衣橱。收好喜欢的衣服，自由搭配，安排每天的穿着。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="衣间">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./app.css?v=2.0">
+  <title>衣间 · 我的个人衣橱</title>
+</head>
+<body>
+  <div id="yi-wardrobe">
+    <div class="yi-phone">
+      <header class="yi-header"><a class="yi-brand" href="#today" aria-label="衣间首页"><span class="yi-emblem"><i data-lucide="sprout"></i></span><span>衣间 <small>YIJIAN</small></span></a><button class="yi-avatar" data-action="settings" aria-label="个人设置与备份">我</button></header>
+      <main class="yi-content" id="app-main"><div class="yi-loading"><span class="yi-emblem">衣</span><h1>留一点空间，给喜欢的自己。</h1><p>正在打开你的衣橱…</p></div></main>
+      <nav class="yi-nav" aria-label="主导航"></nav>
+    </div>
+    <div class="yi-toast" role="status" aria-live="polite" hidden></div>
+    <div class="yi-modal" hidden></div>
+    <input id="backup-input" type="file" accept="application/json,.json" hidden>
+  </div>
+  <noscript>请开启 JavaScript 以使用本地衣橱。</noscript>
+  <script src="./vendor/lucide.js"></script>
+  <script type="module" src="./app.js?v=1.4.1"></script>
+</body>
+</html>
