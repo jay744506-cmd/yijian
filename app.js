@@ -3,7 +3,7 @@ import {load,store} from './storage.js?v=1.4';
 import {categories,subcategories,normalizeClothing,statuses,uid,localDate,dateFromKey,shiftDate,layout,fresh,recommend,validateBackup} from './core.js?v=1.7';
 
 import {mergeWardrobe} from './merge.js?v=1.5';
-import {APP_VERSION,isStandalone,pwaStatus,setupPwa,checkPwaUpdate,applyPwaUpdate,hasPwaUpdate} from './pwa.js?v=1.4.2';
+import {APP_VERSION,isStandalone,pwaStatus,setupPwa,checkPwaUpdate,applyPwaUpdate,hasPwaUpdate} from './pwa.js?v=1.4.3';
 const root=document.getElementById('yi-wardrobe');
 const main=root.querySelector('main'),nav=root.querySelector('nav'),modal=root.querySelector('.yi-modal');
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
