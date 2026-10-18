@@ -1,4 +1,4 @@
-export const APP_VERSION='1.4.1';
+export const APP_VERSION='1.4.2';
 let registration=null;
 let registrationError=false;
 let applyingUpdate=false;

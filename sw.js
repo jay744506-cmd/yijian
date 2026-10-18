@@ -1,6 +1,6 @@
-const CACHE='yijian-shell-v20';
+const CACHE='yijian-shell-v21';
 const SHARE_CACHE='yijian-share-inbox-v1';
-const SHELL=['./','./index.html','./styles.css','./app.css?v=2.0','./app.js?v=1.4.1','./pwa.js?v=1.4.1','./core.js?v=1.7','./storage.js?v=1.4','./merge.js?v=1.5','./artwork.js?v=1.4','./vendor/lucide.js','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./manifest.webmanifest'];
+const SHELL=['./','./index.html','./styles.css','./app.css?v=1.4.2','./app.js?v=1.4.2','./pwa.js?v=1.4.2','./core.js?v=1.7','./storage.js?v=1.4','./merge.js?v=1.5','./artwork.js?v=1.4','./vendor/lucide.js','./icon.svg','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener('message',event=>{if(event.data?.type==='SKIP_WAITING')event.waitUntil(self.skipWaiting())});
 self.addEventListener('activate',event=>event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('yijian-shell-')&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()])));

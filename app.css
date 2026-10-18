@@ -16,6 +16,136 @@
 @media(min-width:700px){#yi-wardrobe .yi-sheet{margin-bottom:22px;border-radius:25px;max-height:90dvh}}
 @media(max-width:500px){:root{background:#fbfaf7}#yi-wardrobe{padding:0}#yi-wardrobe .yi-phone{min-height:100dvh;border:0;border-radius:0;max-width:100%;box-shadow:none}#yi-wardrobe .yi-header{border-radius:0;padding-top:calc(24px + env(safe-area-inset-top))}#yi-wardrobe .yi-nav{width:100%;border-left:0;border-right:0}#yi-wardrobe .yi-content{padding-bottom:calc(125px + env(safe-area-inset-bottom))}}
 @media(max-width:360px){#yi-wardrobe .yi-header{padding-left:19px;padding-right:19px}#yi-wardrobe .yi-content{padding-left:18px;padding-right:18px}#yi-wardrobe .yi-look{height:278px}#yi-wardrobe .yi-outfit-title h2{font-size:16px}#yi-wardrobe .yi-tag{font-size:9px}#yi-wardrobe .yi-chips button{padding:8px 10px}#yi-wardrobe .yi-cloth-picture{height:137px}#yi-wardrobe .yi-cloth-picture img{height:124px}#yi-wardrobe .yi-picker button{height:68px}#yi-wardrobe .yi-editor-tools button{min-width:33px;height:34px}#yi-wardrobe .yi-editor-tools{gap:5px}}
+
+/* Product UI refresh: compact editorial wardrobe workspace. */
+#yi-wardrobe{--yi-radius:20px;font-family:"Avenir Next","PingFang SC","Microsoft YaHei",sans-serif}
+#yi-wardrobe .yi-phone{border-radius:28px;box-shadow:0 20px 60px #4d26300f}
+#yi-wardrobe .yi-header{padding:18px 22px 12px;border-bottom:1px solid color-mix(in srgb,var(--yi-line) 70%,transparent)}
+#yi-wardrobe .yi-brand{font-size:18px;letter-spacing:1px}
+#yi-wardrobe .yi-brand small{font-size:9px;letter-spacing:1.5px}
+#yi-wardrobe .yi-emblem{width:31px;height:31px;background:var(--yi-soft);color:var(--yi-accent)}
+#yi-wardrobe .yi-avatar,.yi-icon-button{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--yi-line);background:var(--yi-paper);color:var(--yi-ink);border-radius:50%}
+#yi-wardrobe .yi-avatar{font-size:12px}
+#yi-wardrobe .yi-content{padding:18px 22px 124px}
+#yi-wardrobe h1{font-size:26px;line-height:1.25;font-weight:600;letter-spacing:-.8px}
+#yi-wardrobe h2{font-size:16px;font-weight:600}
+#yi-wardrobe .yi-eyebrow{font-size:10px;letter-spacing:1.6px;color:var(--yi-accent);font-weight:700}
+#yi-wardrobe .yi-muted,#yi-wardrobe .yi-subline,#yi-wardrobe .yi-help{color:var(--yi-muted)}
+#yi-wardrobe .yi-home-head,#yi-wardrobe .yi-calendar-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:4px 0 16px}
+#yi-wardrobe .yi-home-head .yi-icon-button{flex:none;margin-top:1px}
+#yi-wardrobe .yi-occasion-chips{margin:0 0 14px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}
+#yi-wardrobe .yi-occasion-chips::-webkit-scrollbar{display:none}
+#yi-wardrobe .yi-chip{background:transparent;border:1px solid var(--yi-line);color:var(--yi-muted);min-height:38px;padding:8px 14px;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+#yi-wardrobe .yi-chip[aria-pressed=true]{background:var(--yi-accent);border-color:var(--yi-accent);color:var(--yi-on-accent)}
+#yi-wardrobe .yi-look-card{padding:10px;border:1px solid var(--yi-line);border-radius:24px;background:var(--yi-paper);box-shadow:0 14px 28px #4d26300a}
+#yi-wardrobe .yi-look-card .yi-look{height:250px;border-radius:17px;background:var(--yi-photo)}
+#yi-wardrobe .yi-look-card .yi-look:before{width:58%;height:86%;left:21%;top:7%;border-color:#fff8f440}
+#yi-wardrobe .yi-look-label{font-size:12px;letter-spacing:1px;font-style:normal;color:#fffaf8b8}
+#yi-wardrobe .yi-look-count{color:#fffaf8b8;font-variant-numeric:tabular-nums}
+#yi-wardrobe .yi-look-note{color:#fffaf8b8;letter-spacing:1.2px}
+#yi-wardrobe .yi-heart{width:42px;height:42px;right:12px;bottom:12px;background:#fffaf8e6;color:var(--yi-accent);transition:transform .2s,background .2s}
+#yi-wardrobe .yi-heart:hover{transform:scale(1.04)}
+#yi-wardrobe .yi-look-info{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:14px 4px 0}
+#yi-wardrobe .yi-look-info h2{margin-top:3px}
+#yi-wardrobe .yi-look-info .yi-subline{font-size:12px;margin-top:4px;line-height:1.5}
+#yi-wardrobe .yi-look-card .yi-actions{margin-top:13px}
+#yi-wardrobe .yi-primary,#yi-wardrobe .yi-secondary{min-height:46px;border-radius:13px;padding:11px 14px;transition:transform .18s,background .2s,box-shadow .2s}
+#yi-wardrobe .yi-primary{background:var(--yi-accent);box-shadow:0 8px 16px color-mix(in srgb,var(--yi-accent) 20%,transparent)}
+#yi-wardrobe .yi-secondary{background:var(--yi-soft);color:var(--yi-ink)}
+#yi-wardrobe .yi-primary:hover,#yi-wardrobe .yi-secondary:hover,#yi-wardrobe .yi-quick-card:hover{transform:translateY(-1px)}
+#yi-wardrobe .yi-quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+#yi-wardrobe .yi-quick-card{min-height:88px;padding:12px 10px;display:grid;grid-template-columns:28px 1fr 14px;align-items:center;gap:7px;text-align:left;border:1px solid var(--yi-line);border-radius:16px;background:var(--yi-paper);color:var(--yi-ink);transition:transform .18s,background .2s}
+#yi-wardrobe .yi-quick-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--yi-soft);color:var(--yi-accent)}
+#yi-wardrobe .yi-quick-icon svg{width:16px;height:16px}
+#yi-wardrobe .yi-quick-card strong,#yi-wardrobe .yi-quick-card small{display:block}
+#yi-wardrobe .yi-quick-card strong{font-size:18px;line-height:1.1;font-variant-numeric:tabular-nums}
+#yi-wardrobe .yi-quick-card small{font-size:10px;color:var(--yi-muted);margin-top:4px;white-space:nowrap}
+#yi-wardrobe .yi-quick-arrow{color:var(--yi-muted)}
+#yi-wardrobe .yi-quick-arrow svg{width:14px;height:14px}
+#yi-wardrobe .yi-compact-notice{margin-top:12px;padding:11px 12px;font-size:11px;border-radius:14px}
+#yi-wardrobe .yi-empty-card{padding:32px 20px;text-align:center;border:1px dashed var(--yi-line);border-radius:20px;background:var(--yi-paper)}
+#yi-wardrobe .yi-empty-card>svg{width:28px;height:28px;color:var(--yi-accent);margin-bottom:10px}
+#yi-wardrobe .yi-empty-card p{font-size:12px;color:var(--yi-muted);margin:6px 0 16px}
+#yi-wardrobe .yi-calendar-head{align-items:center;margin-bottom:16px}
+#yi-wardrobe .yi-calendar-head .yi-weather{min-height:42px;padding:8px 11px;border:1px solid var(--yi-line);border-radius:12px;background:var(--yi-paper);color:var(--yi-muted);white-space:nowrap}
+#yi-wardrobe .yi-calendar{margin-top:0;padding:15px;border:1px solid var(--yi-line);border-radius:20px;background:var(--yi-paper)}
+#yi-wardrobe .yi-cal-grid{margin-top:13px;gap:5px 2px}
+#yi-wardrobe .yi-date{height:40px;border-radius:11px}
+#yi-wardrobe .yi-date.chosen{background:var(--yi-accent);color:var(--yi-on-accent)}
+#yi-wardrobe .yi-plan{margin-top:12px;padding:15px;border:1px solid var(--yi-line);background:var(--yi-paper);border-radius:20px}
+#yi-wardrobe .yi-local{font-size:10px;margin-top:14px}
+#yi-wardrobe .yi-nav{padding:8px 12px calc(9px + env(safe-area-inset-bottom));border-top:1px solid var(--yi-line);background:color-mix(in srgb,var(--yi-paper) 96%,transparent)}
+#yi-wardrobe .yi-nav button{min-height:50px;border-radius:14px;gap:4px;transition:color .2s,background .2s,transform .18s}
+#yi-wardrobe .yi-nav button[aria-current=page]{background:var(--yi-soft);color:var(--yi-accent);font-weight:600}
+#yi-wardrobe .yi-nav button:active{transform:scale(.96)}
+#yi-wardrobe .yi-nav svg{width:20px;height:20px}
+#yi-wardrobe .yi-heading{margin:2px 0 14px}
+#yi-wardrobe .yi-search{border:1px solid transparent;background:var(--yi-soft);padding:12px 13px;border-radius:13px}
+#yi-wardrobe .yi-search:focus-within{border-color:var(--yi-accent);outline:0}
+#yi-wardrobe .yi-grid{gap:14px 10px}
+#yi-wardrobe .yi-cloth-picture{height:142px;border-radius:16px;background:var(--yi-photo)}
+#yi-wardrobe .yi-cloth-picture img{height:126px}
+#yi-wardrobe .yi-cloth-name{font-size:13px;font-weight:500}
+#yi-wardrobe .yi-cloth-meta{font-size:10px;color:var(--yi-muted)}
+#yi-wardrobe .yi-segment{background:var(--yi-soft);border-radius:13px;padding:4px;margin-bottom:14px}
+#yi-wardrobe .yi-segment button{min-height:40px;border-radius:10px;color:var(--yi-muted);transition:background .2s,color .2s}
+#yi-wardrobe .yi-segment button.active{background:var(--yi-paper);color:var(--yi-accent);font-weight:600}
+#yi-wardrobe .yi-canvas{border-radius:19px;background-color:var(--yi-photo);box-shadow:inset 0 0 0 1px #fff7f322}
+#yi-wardrobe .yi-outfit-card{border-color:var(--yi-line);border-radius:18px;background:var(--yi-paper);box-shadow:0 8px 18px #4d263008}
+#yi-wardrobe .yi-modal{background:#2d202280;backdrop-filter:blur(4px)}
+#yi-wardrobe .yi-sheet{border:1px solid var(--yi-line);padding:20px;border-radius:24px 24px 0 0}
+#yi-wardrobe button,#yi-wardrobe input,#yi-wardrobe select{touch-action:manipulation}
+#yi-wardrobe button:focus-visible,#yi-wardrobe input:focus-visible,#yi-wardrobe select:focus-visible{outline:3px solid color-mix(in srgb,var(--yi-accent) 42%,transparent);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){#yi-wardrobe *{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+@media(max-width:500px){#yi-wardrobe .yi-phone{border-radius:0}#yi-wardrobe .yi-header{padding-top:calc(15px + env(safe-area-inset-top))}#yi-wardrobe .yi-content{padding-top:16px}}
+@media(max-width:370px){#yi-wardrobe .yi-content{padding-left:17px;padding-right:17px}#yi-wardrobe .yi-quick-card{padding-left:8px;padding-right:8px}#yi-wardrobe .yi-quick-card strong{font-size:16px}#yi-wardrobe .yi-look-card .yi-look{height:230px}}
+
+#yi-wardrobe .yi-studio-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:2px 0 14px}
+#yi-wardrobe .yi-studio-head .yi-plus{flex:none}
+#yi-wardrobe .yi-editor-card{padding:12px;border:1px solid var(--yi-line);border-radius:22px;background:var(--yi-paper);box-shadow:0 10px 24px #4d263008}
+#yi-wardrobe .yi-editor-title{display:grid;grid-template-columns:1fr 92px;gap:10px;align-items:center;margin:0 2px 12px}
+#yi-wardrobe .yi-editor-title .yi-editor-name{margin:0;padding:5px 0;border-bottom:1px solid var(--yi-line);font-size:18px;font-weight:600}
+#yi-wardrobe .yi-editor-title select{width:100%;min-height:36px;padding:6px 8px;border:1px solid var(--yi-line);border-radius:10px;background:var(--yi-soft);color:var(--yi-ink);font-size:12px}
+#yi-wardrobe .yi-editor-card .yi-canvas{height:270px;border-radius:17px}
+#yi-wardrobe .yi-canvas-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 2px 2px;color:var(--yi-muted);font-size:11px}
+#yi-wardrobe .yi-tools-secondary{display:flex;gap:5px}
+#yi-wardrobe .yi-tools-secondary button{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:var(--yi-soft);color:var(--yi-ink)}
+#yi-wardrobe .yi-tools-secondary button:disabled{opacity:.35}
+#yi-wardrobe .yi-selected-bar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin-top:8px;padding:8px 10px;border-radius:12px;background:var(--yi-soft);font-size:11px}
+#yi-wardrobe .yi-selected-bar>span{display:flex;align-items:center;gap:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#yi-wardrobe .yi-selected-bar>span svg{width:14px;height:14px;color:var(--yi-accent)}
+#yi-wardrobe .yi-selected-bar label{display:flex;align-items:center;gap:6px;color:var(--yi-muted);font-size:10px}
+#yi-wardrobe .yi-selected-bar input{width:100%;min-width:60px;accent-color:var(--yi-accent)}
+#yi-wardrobe .yi-selected-bar .yi-text-button{margin:0;padding:5px;color:var(--yi-accent)}
+#yi-wardrobe .yi-editor-hint{margin:9px 2px 0;color:var(--yi-muted);font-size:11px;line-height:1.5}
+#yi-wardrobe .yi-add-panel{margin-top:14px;padding:14px;border:1px solid var(--yi-line);border-radius:20px;background:var(--yi-paper)}
+#yi-wardrobe .yi-add-panel h2{font-size:15px}
+#yi-wardrobe .yi-picker-chips{margin:12px 0 0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:none}
+#yi-wardrobe .yi-picker-chips::-webkit-scrollbar{display:none}
+#yi-wardrobe .yi-add-panel .yi-subfilters{margin:10px 0 0;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+#yi-wardrobe .yi-add-panel .yi-picker{margin-top:11px;grid-template-columns:repeat(5,1fr);gap:7px}
+#yi-wardrobe .yi-add-panel .yi-picker button{height:64px;border-radius:11px;background:var(--yi-soft)}
+#yi-wardrobe .yi-advanced{margin-top:10px;border:1px solid var(--yi-line);border-radius:15px;background:var(--yi-paper);overflow:hidden}
+#yi-wardrobe .yi-advanced summary{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;cursor:pointer;list-style:none;font-size:12px;color:var(--yi-ink)}
+#yi-wardrobe .yi-advanced summary::-webkit-details-marker{display:none}
+#yi-wardrobe .yi-advanced summary:after{content:'+';margin-left:auto;color:var(--yi-muted);font-size:18px}
+#yi-wardrobe .yi-advanced[open] summary:after{content:'−'}
+#yi-wardrobe .yi-advanced summary svg{width:17px;height:17px;color:var(--yi-accent)}
+#yi-wardrobe .yi-advanced summary small{color:var(--yi-muted);font-size:10px}
+#yi-wardrobe .yi-advanced-body{padding:0 14px 14px}
+#yi-wardrobe .yi-advanced-body .yi-model-preview{max-height:180px;margin-bottom:9px}
+#yi-wardrobe .yi-advanced-body .yi-model-upload{margin-top:9px}
+#yi-wardrobe .yi-studio-actions{margin-top:12px}
+@media(max-width:370px){#yi-wardrobe .yi-editor-title{grid-template-columns:1fr 82px}#yi-wardrobe .yi-editor-card .yi-canvas{height:245px}#yi-wardrobe .yi-tools-secondary{gap:3px}#yi-wardrobe .yi-tools-secondary button{width:35px;height:35px}#yi-wardrobe .yi-add-panel .yi-picker{grid-template-columns:repeat(4,1fr)}}
+#yi-wardrobe .yi-page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:2px 0 16px}
+#yi-wardrobe .yi-page-head .yi-plus{flex:none}
+#yi-wardrobe .yi-page-head h1{margin-bottom:5px}
+#yi-wardrobe .yi-outfit-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;margin:-2px 0 14px;border:1px solid var(--yi-line);border-radius:15px;background:var(--yi-soft);font-size:12px;color:var(--yi-muted)}
+#yi-wardrobe .yi-outfit-summary strong{font-size:18px;color:var(--yi-ink);font-variant-numeric:tabular-nums}
+#yi-wardrobe .yi-outfit-summary .yi-text-button{margin:0;padding:7px 0;color:var(--yi-accent)}
+#yi-wardrobe .yi-nav{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:8px 10px calc(9px + env(safe-area-inset-bottom))}
+#yi-wardrobe .yi-nav button{min-width:0;min-height:52px;padding:7px 3px;white-space:nowrap;font-size:10px}
+#yi-wardrobe .yi-nav svg{width:20px;height:20px}
 #yi-wardrobe .yi-subfilters{display:flex;flex-wrap:wrap;gap:5px;margin:-6px 0 19px;padding:8px;background:var(--yi-soft);border-radius:12px}#yi-wardrobe .yi-subfilters button{padding:8px 10px;border-radius:8px;font-size:11px;color:var(--yi-muted);min-height:34px}#yi-wardrobe .yi-subfilters button[aria-pressed=true]{background:var(--yi-paper);color:var(--yi-accent);box-shadow:0 1px 4px #303b3210}#yi-wardrobe .yi-picker{margin-top:10px}#yi-wardrobe .yi-cloth{align-self:start}#yi-wardrobe .yi-cloth-note{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.7;color:var(--yi-ink);padding-top:7px;margin-top:7px;border-top:1px solid var(--yi-line)}#yi-wardrobe .yi-cloth-name,#yi-wardrobe .yi-cloth-meta{overflow-wrap:anywhere}#yi-wardrobe .yi-sheet textarea{display:block;width:100%;min-height:105px;resize:vertical;border:1px solid var(--yi-line);border-radius:10px;background:var(--yi-bg);color:var(--yi-ink);font:inherit;font-size:16px;line-height:1.6;padding:11px;margin-top:5px}#yi-wardrobe .yi-note-footer{display:flex;justify-content:space-between;gap:8px;margin-top:6px;font-size:10px;color:var(--yi-muted)}#yi-wardrobe .yi-optional{font-size:10px;margin-left:4px;color:var(--yi-muted)}#yi-wardrobe .yi-detail-note{background:var(--yi-soft);border-radius:13px;padding:13px 14px;margin-top:15px}#yi-wardrobe .yi-detail-note>span{font-size:11px;color:var(--yi-muted)}#yi-wardrobe .yi-detail-note p{margin-top:6px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--yi-ink);font-size:13px}
 #yi-wardrobe .yi-import-row{display:flex;align-items:center;gap:10px;margin:0 0 15px}#yi-wardrobe .yi-import-row .yi-secondary{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none;min-height:39px;padding:8px 11px;font-size:12px}#yi-wardrobe .yi-import-row svg{width:16px;height:16px}#yi-wardrobe .yi-import-row span{color:var(--yi-muted);font-size:11px;line-height:1.5}#yi-wardrobe .yi-sheet .yi-import-row{margin-top:10px;flex-wrap:wrap}
 #yi-wardrobe .yi-week-section{margin-top:26px}#yi-wardrobe .yi-month-heading{margin-top:35px;scroll-margin-top:18px}
